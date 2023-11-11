@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="696.0" prefWidth="1310.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <TabPane prefHeight="720.0" prefWidth="1280.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="636.0" prefWidth="1251.0">
+                     <children>
+                        <TableView fx:id="apptTable" layoutX="21.0" layoutY="70.0" prefHeight="561.0" prefWidth="1239.0">
+                          <columns>
+                            <TableColumn fx:id="apptIDCol" minWidth="32.0" text="Appt ID." />
+                            <TableColumn fx:id="apptTitleCol" minWidth="103.0" prefWidth="115.0" text="Title" />
+                              <TableColumn fx:id="apptDescCol" minWidth="160.0" prefWidth="179.0" text="Description" />
+                              <TableColumn fx:id="apptLocationCol" minWidth="117.0" prefWidth="164.0" text="Location" />
+                              <TableColumn fx:id="apptContactCol" minWidth="117.0" text="Contact" />
+                              <TableColumn fx:id="apptTypeCol" minWidth="117.0" text="Type" />
+                              <TableColumn fx:id="apptStartCol" minWidth="160.0" text="Start Time" />
+                              <TableColumn fx:id="apptEndCol" minWidth="160.0" text="End Time" />
+                              <TableColumn fx:id="apptCustIdCol" minWidth="32.0" text="Customer ID" />
+                              <TableColumn fx:id="apptUserIdCol" prefWidth="74.0" text="User ID" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="dashEditApptButton" layoutX="200.0" layoutY="645.0" mnemonicParsing="false" onAction="#dashEditAppt" text="Edit Appointment">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <RadioButton fx:id="apptWeekRadio" layoutX="116.0" layoutY="44.0" mnemonicParsing="false" onAction="#filterAppt" text="Week" />
+                        <RadioButton fx:id="apptMonthRadio" layoutX="42.0" layoutY="44.0" mnemonicParsing="false" onAction="#filterAppt" text="Month" />
+                        <Separator layoutX="45.0" layoutY="25.0" prefHeight="9.0" prefWidth="34.0" />
+                        <Label layoutX="88.0" layoutY="19.0" text="Filters" />
+                        <Separator layoutX="129.0" layoutY="25.0" prefHeight="9.0" prefWidth="34.0" />
+                        <Button fx:id="dashNewApptButton" layoutX="38.0" layoutY="645.0" mnemonicParsing="false" onAction="#newAppt" text="New Appointment">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="dashDeleteButton" layoutX="1163.0" layoutY="645.0" mnemonicParsing="false" onAction="#deleteAppt" text="Delete">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="contactSearchBox" layoutX="1111.0" layoutY="32.0" promptText="Appt ID or Contact" />
+                        <Button layoutX="1037.0" layoutY="32.0" mnemonicParsing="false" onAction="#getContact" text="Search" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="customerTable" layoutX="21.0" layoutY="70.0" prefHeight="561.0" prefWidth="1239.0">
+                          <columns>
+                            <TableColumn fx:id="custIdCol" prefWidth="73.0" text="ID" />
+                            <TableColumn fx:id="custNameCol" prefWidth="254.0" text="Name" />
+                              <TableColumn fx:id="custAddressCol" prefWidth="427.0" text="Address" />
+                              <TableColumn fx:id="custFLDivisionCol" prefWidth="152.0" text="State/Provinces" />
+                              <TableColumn fx:id="custCountryCol" prefWidth="159.0" text="Country" />
+                              <TableColumn fx:id="custPhoneCol" prefWidth="172.0" text="Phone Number" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="dashNewCustButton" layoutX="38.0" layoutY="645.0" mnemonicParsing="false" onAction="#newCustomer" text="New Customer">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="dashEditCustButton" layoutX="178.0" layoutY="645.0" mnemonicParsing="false" onAction="#dashEditCustomer" text="Edit Customer">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="custDeleteButton" layoutX="1163.0" layoutY="645.0" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="customerSearchBox" layoutX="1111.0" layoutY="31.0" promptText="Customer name or ID" />
+                        <Button layoutX="1037.0" layoutY="31.0" mnemonicParsing="false" onAction="#getCustomer" text="Search" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Reports">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="reportTxtArea" layoutX="33.0" layoutY="74.0" prefHeight="594.0" prefWidth="1212.0" />
+                        <Button fx:id="reportMTButton" layoutX="285.0" layoutY="26.0" mnemonicParsing="false" onAction="#monthTypeReport" text="Total Appointments">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reportSchedButton" layoutX="482.0" layoutY="26.0" mnemonicParsing="false" onAction="#contactSchedules" text="Contacts Schedule">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reportsCustInfoButton" layoutX="677.0" layoutY="26.0" mnemonicParsing="false" onAction="#customerInfo" text="Customer Info">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reportExport" layoutX="840.0" layoutY="26.0" mnemonicParsing="false" onAction="#exportBeneficiares" text="Export Beneficiaries">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,3 @@
+jdbcUrl = jdbc:mysql://IP:Port/DB NAME
+dbUserName = 
+dbPassword = 

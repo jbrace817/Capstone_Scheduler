@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="376.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BeneficiaryAMController">
+   <children>
+      <Label fx:id="custHeaderLbl" alignment="CENTER" layoutX="234.0" layoutY="10.0" text="Update Customer">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="custIdLbl" layoutX="51.0" layoutY="75.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custId" disable="true" layoutX="151.0" layoutY="73.0" prefHeight="25.0" prefWidth="51.0" />
+      <Label fx:id="custNameLbl" layoutX="51.0" layoutY="122.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custNameTxt" layoutX="151.0" layoutY="120.0" />
+      <Label fx:id="custPhoneLbl" layoutX="355.0" layoutY="71.0" text="Phone">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custPhoneTxt" layoutX="405.0" layoutY="68.0" />
+      <Label fx:id="custAddressLbl" layoutX="51.0" layoutY="169.0" text="Address">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custAddressTxt" layoutX="151.0" layoutY="167.0" prefHeight="25.0" prefWidth="401.0" />
+      <Label fx:id="custCountryLbl" layoutX="51.0" layoutY="216.0" text="Country">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="custCountryCombo" layoutX="151.0" layoutY="214.0" prefWidth="150.0" />
+      <Label fx:id="custFirstLevelLbl" layoutX="51.0" layoutY="263.0" text="State/Province">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="custFirstLevelCombo" layoutX="151.0" layoutY="261.0" prefWidth="150.0" />
+      <Label fx:id="custPostalLbl" layoutX="321.0" layoutY="264.0" text="Postal Code">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custPostTxt" layoutX="405.0" layoutY="261.0" prefHeight="25.0" prefWidth="150.0" />
+      <Separator layoutX="10.0" layoutY="44.0" prefHeight="3.0" prefWidth="580.0" />
+      <Button fx:id="custSaveButton" layoutX="419.0" layoutY="324.0" mnemonicParsing="false" onAction="#saveCustomer" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="custCancelButton" layoutX="491.0" layoutY="324.0" mnemonicParsing="false" onAction="#custCancel" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="beneDeleteButton" layoutX="51.0" layoutY="324.0" mnemonicParsing="false" onAction="#deleteBene" text="Delete">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
