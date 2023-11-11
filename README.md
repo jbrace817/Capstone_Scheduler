@@ -1,4 +1,4 @@
-#Scheduler application - C1868 Performance Assessment.
+#Scheduler application - C868 Performance Assessment.
 
 - Author: James Brace
 - Email: jbrace4@wgu.edu
